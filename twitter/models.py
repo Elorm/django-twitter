@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 #but does not change its database representation
 class Tweeter(models.Model):
     user = models.OneToOneField(User)
+    #picture = models.ImageField(upload_to = "/home/ubuntu/Documents/Django/django-twitter/uploadedPictures")
 
     @property
     def tweets(self):
