@@ -30,7 +30,9 @@
 <div class="container" id="main-container">
   <div class="row">
     <div class="span4 column" id="left-column">
+
       <div class="twitter-box top-rectangle">
+        <img src="/static/img/profile_picture.png">
         {{user.username}}	
       </div>
       <div class="navbar" style="margin-left:15px; margin-bottom:0px; border-radius:0px">
@@ -76,10 +78,10 @@
           </div>
           <div class="span4">
             <div class="tweet-author">
-              {{t.author.user}}
+              {{t.author.user}} <span class = "created">{{t.created}}</span>
             </div>
             <div class="tweet-text">
-              {{t.text}}
+              {{t.text}} 
             </div>
           </div>
         </div>

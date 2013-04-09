@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 #A proxy model adds functionality to a class
 #but does not change its database representation
 class Tweeter(models.Model):
-
     user = models.OneToOneField(User)
 
     @property
@@ -17,4 +16,4 @@ class Tweet(models.Model):
     created = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
-        return "%s,%s" % (self.author.username, self.text)
+        return "%s,%s, %s" % (self.author.username, self.text, self.created)
